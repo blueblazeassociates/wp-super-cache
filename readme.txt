@@ -1,7 +1,7 @@
 === WP Super Cache ===
-Contributors: donncha, automattic
+Contributors: donncha, automattic, kraftbj
 Tags: performance,caching,wp-cache,wp-super-cache,cache
-Tested up to: 4.1.1
+Tested up to: 4.2.2
 Stable tag: 1.4.4
 Requires at least: 3.0
 
@@ -62,6 +62,19 @@ The cache directory, usually wp-content/cache/ is only for temporary files. Do n
 Security release fixing an XSS bug in the settings page, and fix for fatal error in output handler.
 
 == Changelog ==
+
+= 1.4.5 =
+* Enhancement: Only preload public post types. Props webaware.
+* Added an uninstall function that deletes the config file. Deactivate function doesn't delete it any more.
+* Possible to deactivate the plugin without visiting the settings page now.
+* Fixed the cache rebuild system. Rebuild files now survive longer than the request that generate them.
+* Minor optimisations: prune_super_cache() exits immediately if the file doesn't exist. The output of wp_cache_get_cookies_values() is now cached.
+* Added PHP pid to the debug log to aid debugging.
+* Various small bug fixes.
+* Fixed reset of expiry time and GC settings when updating advanced settings.
+* Removed CacheMeta class to avoid APC errors. It's not used any more.
+* Fixed reset of advanced settings when using "easy" settings page.
+
 = 1.4.4 =
 * Fixed fatal error in output handler if GET parameters present in query. Props webaware.
 * Fixed debug log. It wasn't logging the right message.
@@ -577,11 +590,11 @@ Translators who did a great job converting the text of the plugin to their nativ
 * Tai (Japanese)
 * [Vitaly](http://pressword.com.ua/wordpress/) (Ukranian)
 * [Pseric](http://pseric.com/) and [Priv](http://priv.tw/blog) (Traditional Chinese)
-* [Maître Mô](http://maitremo.fr/) (French)
+* [Maï¿½tre Mï¿½](http://maitremo.fr/) (French)
 * [Mathias Roth](http://trade-service.eu/) (German)
-* Bar¿¿ Ünver (Turkish)
+* Barï¿½ï¿½ ï¿½nver (Turkish)
 * [Elvis Fweb](http://wp.turkenichev.ru/) (Russian)
-* Fredrik Forséll (Swedish)
+* Fredrik Forsï¿½ll (Swedish)
 * [Alyona Lompar](http://wwww.webhostinggeeks.com/) (Ukranian)
 * [Nata Strazda](http://www.webhostingrating.com/) (Lithuanian)
 * [Alexander Alexandrov](http://www.designcontest.com/) (Belarusian)
