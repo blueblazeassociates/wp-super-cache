@@ -1,0 +1,27 @@
+{
+  "name" : "blueblazeassociates/wp-super-cache",
+  "description" : "Very fast caching plugin for WordPress.",
+  "type" : "wordpress-plugin",
+  "homepage" : "http://wordpress.org/plugins/wp-super-cache/",
+  "license" : [
+    "GPL-2.0+"
+  ],
+  "authors" : [{
+    "name" : "Automattic",
+    "homepage" : "http://automattic.com/",
+    "role" : "Author/Creator"
+  }, {
+    "name" : "Ed Gifford",
+    "homepage" : "http://www.blueblazeassociates.com",
+    "role" : "Composer-fier",
+    "email" : "egifford@blueblazeassociates.com"
+    }
+  ],
+  "keywords" : [
+    "cache",
+    "caching",
+    "performance",
+    "wp-cache",
+    "wp-super-cache" 
+  ]
+}
